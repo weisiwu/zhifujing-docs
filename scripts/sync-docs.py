@@ -40,11 +40,6 @@ APPS = {
         "title": "projects-dashboard（项目仪表盘）",
         "description": "项目管理 Dashboard，集成数据可视化、拖拽排序、SEO 自动化。",
     },
-    "openclaw-agents-dashboard": {
-        "doc_file": "apps/openclaw-agents-dashboard.md",
-        "title": "openclaw-agents-dashboard（Agent 管理面板）",
-        "description": "OpenClaw Agent 运行状态管理面板。",
-    },
     "poetry-app": {
         "doc_file": "apps/poetry-app.md",
         "title": "poetry-app（诗词应用）",

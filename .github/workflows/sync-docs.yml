@@ -43,22 +43,18 @@ jobs:
           path: _apps/teamclaw
           token: ${{ secrets.PAT_TOKEN }}
 
-      - name: Checkout projects-dashboard + openclaw-agents-dashboard
+      - name: Checkout projects-dashboard
         uses: actions/checkout@v4
         with:
           repository: weisiwu/ZFJdashboard
           path: _apps/ZFJdashboard
           token: ${{ secrets.PAT_TOKEN }}
 
-      # 重组 ZFJdashboard 里的两个子项目
-      - name: Reorganize dashboard repos
+      - name: Reorganize dashboard repo
         run: |
-          mkdir -p _apps/projects-dashboard _apps/openclaw-agents-dashboard
+          mkdir -p _apps/projects-dashboard
           if [ -d "_apps/ZFJdashboard/projects-dashboard" ]; then
             cp -r _apps/ZFJdashboard/projects-dashboard/* _apps/projects-dashboard/ 2>/dev/null || true
-          fi
-          if [ -d "_apps/ZFJdashboard/openclaw-agents-dashboard" ]; then
-            cp -r _apps/ZFJdashboard/openclaw-agents-dashboard/* _apps/openclaw-agents-dashboard/ 2>/dev/null || true
           fi
 
       - name: Run sync script

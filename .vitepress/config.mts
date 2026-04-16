@@ -27,7 +27,6 @@ export default defineConfig({
             { text: 'xiaowutools-v2（小工具箱）', link: '/apps/xiaowutools-v2' },
             { text: 'teamclaw（团队协作）', link: '/apps/teamclaw' },
             { text: 'projects-dashboard（项目仪表盘）', link: '/apps/projects-dashboard' },
-            { text: 'openclaw-agents-dashboard', link: '/apps/openclaw-agents-dashboard' },
             { text: 'poetry-app（诗词应用）', link: '/apps/poetry-app' },
           ]
         }

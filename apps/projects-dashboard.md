@@ -1,55 +1,117 @@
 # projects-dashboard（项目仪表盘）
 
-> 功能丰富的项目管理 Dashboard，集成数据可视化、拖拽排序、SEO 自动化、API 文档生成等功能。
+> This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## 技术栈
 
 | 类别 | 技术 |
 |------|------|
-| 框架 | Next.js 16 + React 19 |
+| 框架 | Next.js 16.1.6 |
+| 语言 | React 19.2.3 |
 | 语言 | TypeScript |
-| 样式 | Tailwind CSS v4 |
-| 后端 | Supabase |
-| 可视化 | Recharts 3 |
-| 拖拽 | @dnd-kit (core + sortable) |
-| 动画 | Framer Motion |
+| 样式 | Tailwind CSS |
 | 数据获取 | SWR |
-| 验证 | Zod |
-| 测试 | Vitest + Testing Library |
-| API 文档 | next-swagger-doc + swagger-ui-react |
-| 暗色模式 | next-themes |
-| 环境变量 | @t3-oss/env-nextjs |
-| 限流 | rate-limiter-flexible |
-| 包分析 | @next/bundle-analyzer |
+| 可视化 | Recharts |
+| 后端 | Supabase |
+| 测试 | Vitest |
 
-## 核心功能
+## 关键依赖
 
-### 🎯 项目管理
-- 拖拽排序（dnd-kit）
-- 项目状态追踪
-- Supabase 数据持久化
+| 包名 | 版本 |
+|------|------|
+| `@dnd-kit/core` | ^6.3.1 |
+| `@dnd-kit/sortable` | ^10.0.0 |
+| `@dnd-kit/utilities` | ^3.2.2 |
+| `@next/bundle-analyzer` | ^16.1.6 |
+| `@supabase/supabase-js` | ^2.99.1 |
+| `@t3-oss/env-nextjs` | ^0.13.10 |
+| `date-fns` | ^4.1.0 |
+| `framer-motion` | ^12.36.0 |
+| `next` | 16.1.6 |
+| `next-swagger-doc` | ^0.4.1 |
+| `next-themes` | ^0.4.6 |
+| `rate-limiter-flexible` | ^10.0.0 |
+| `react` | 19.2.3 |
+| `react-dom` | 19.2.3 |
+| `recharts` | ^3.8.0 |
+| `swagger-ui-react` | ^5.32.0 |
+| `swr` | ^2.4.1 |
+| `zod` | ^4.3.6 |
 
-### 📊 数据可视化
-- Recharts 图表（折线图、柱状图、饼图等）
-- 实时数据更新（SWR）
+## 项目结构
 
-### 🔍 SEO 优化
-- 自动生成 SEO 图片（`generate:seo-images` 脚本）
-- 结构化元数据
+```
+projects-dashboard/
+├── .vercel/
+│   ├── project.json
+├── docs/
+├── public/
+│   ├── manifest.json
+├── scripts/
+│   ├── generate-seo-images.ts
+├── src/
+│   ├── __tests__/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── utils/
+│   │   ├── ProjectCard.test.tsx
+│   │   ├── setup.ts
+│   ├── app/
+│   │   ├── api/
+│   │   ├── api-reference/
+│   │   ├── components/
+│   │   ├── data/
+│   │   ├── lib/
+│   │   ├── login/
+│   │   ├── overview/
+│   │   ├── project/
+│   │   ├── settings/
+│   │   ├── staff/
+│   │   ├── tasks/
+│   │   ├── usage/
+│   │   ├── error.tsx
+│   │   ├── global-error.tsx
+│   │   ├── layout.tsx
+│   │   ├── loading.tsx
+│   │   ├── not-found.tsx
+│   │   ├── page.tsx
+│   │   ├── robots.ts
+│   │   ├── sitemap.ts
+│   ├── components/
+│   │   ├── animation/
+│   │   ├── animations/
+│   │   ├── auth/
+│   │   ├── batch-operations/
+│   │   ├── charts/
+│   │   ├── command-palette/
+│   │   ├── compare/
+│   │   ├── dashboard/
+│   │   ├── data/
+│   │   ├── empty-states/
+│   │   ├── features/
+│   │   ├── feedback/
+│   │   ├── health/
+│   │   ├── kanban/
+│   │   ├── layout/
+│   │   ├── markdown/
+│   │   ├── project/
+│   │   ├── skeletons/
+│   │   ├── ui/
+│   │   ├── usage/
+│   │   ├── Breadcrumb.tsx
+│   │   ├── ErrorBoundary.tsx
+│   │   ├── FavoritesSection.tsx
+```
 
-### 📖 API 文档
-- Swagger UI 自动生成
-- 基于 Zod Schema 的类型安全 API
+## 最近更新
 
-### 🧪 测试与质量
-- Vitest 单元测试 + Testing Library 组件测试
-- 测试覆盖率报告
-- 环境变量 Schema 验证（@t3-oss/env-nextjs）
-- 包体积分析（`ANALYZE=true next build`）
+| Commit | 说明 |
+|--------|------|
+| `20bcfd7` | iter-3: Supabase客户端配置和API改造 - 完成supabase客户端集成 |
+| `2d5f05b` | iter-1: Supabase数据库表设计和种子数据 - 添加Supabase客户端和类型定义 |
+| `5f7bc60` | iter-10: 功能增加 - 项目健康状态指示、右键上下文菜单、项目对比功能 |
+| `0aa578c` | iter-9: 样式改版 - 表单组件/模态框抽屉/表格样式 |
+| `25b0354` | fix: 修复 TypeScript lint 错误 |
 
-## 特色亮点
-
-- 使用 **Next.js 16 + React 19** 最新版本
-- 完整的 **测试体系**（Vitest + Testing Library + 覆盖率）
-- **类型安全** 全链路（Zod + TypeScript）
-- **暗色模式** 开箱即用
+---
+*最后同步: 2026-04-16 16:39*

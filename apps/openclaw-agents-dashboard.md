@@ -1,35 +1,72 @@
 # openclaw-agents-dashboard（Agent 管理面板）
 
-> 基于 Next.js 16 的 Dashboard 应用，用于管理 OpenClaw Agent 的运行状态。
+> This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## 技术栈
 
 | 类别 | 技术 |
 |------|------|
-| 框架 | Next.js **16.1.6** |
+| 框架 | Next.js 16.1.6 |
+| 语言 | React 19.2.3 |
 | 语言 | TypeScript |
-| UI | React **19.2.3** + Tailwind CSS **v4** |
-| 构建 | @tailwindcss/postcss v4 |
-| 代码规范 | ESLint 9 |
+| 样式 | Tailwind CSS |
 
-## 项目特点
+## 关键依赖
 
-- 🚀 使用 **Next.js 16 + React 19** 最新版本
-- 🎨 **Tailwind CSS v4** 新一代样式方案
-- 📦 **极简依赖**，无额外 UI 库或数据层
-- ⚡ 标准 Next.js 开发/构建/lint 脚本
+| 包名 | 版本 |
+|------|------|
+| `next` | 16.1.6 |
+| `react` | 19.2.3 |
+| `react-dom` | 19.2.3 |
 
-## 开发命令
+## 项目结构
 
-```bash
-# 开发模式
-npm run dev
-
-# 构建
-npm run build
-
-# 代码检查
-npm run lint
+```
+openclaw-agents-dashboard/
+├── .github/
+│   ├── workflows/
+│   │   ├── agent-scan.yml
+├── .vercel/
+│   ├── project.json
+├── public/
+│   ├── manifest.json
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── data/
+│   │   ├── lib/
+│   │   ├── overview/
+│   │   ├── project/
+│   │   ├── settings/
+│   │   ├── staff/
+│   │   ├── tasks/
+│   │   ├── usage/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   ├── components/
+│   │   ├── features/
+│   │   ├── layout/
+│   │   ├── ui/
+│   ├── lib/
+│   │   ├── openclaw.ts
+├── README.md
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── tsconfig.json
 ```
 
-> 该项目处于早期阶段，README 为标准 create-next-app 模板内容。
+## 最近更新
+
+| Commit | 说明 |
+|--------|------|
+| `e0a7f46` | Round11-15: Professional admin UI, sidebar, table, footer |
+| `bfa8d87` | Round2-10: Sidebar, table, professional UI |
+| `8683952` | Round2-5: Add sidebar, table layout, breadcrumbs |
+| `8fde9fc` | Round1: Add top nav, notifications, user avatar |
+| `7594f45` | Fix: Show business data instead of tech info, add real docs |
+
+---
+*最后同步: 2026-04-16 16:39*

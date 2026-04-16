@@ -1,0 +1,73 @@
+name: Sync Docs
+
+on:
+  # A: 监听所有 app 仓库的 push 事件（通过 repository_dispatch 汇总）
+  repository_dispatch:
+    types: [sync-docs]
+  # A: 也支持手动触发
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '强制全量同步'
+        required: false
+        default: 'false'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout docs repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Checkout xiaowutools-v2
+        uses: actions/checkout@v4
+        with:
+          repository: weisiwu/zhifujing-tools
+          path: _apps/xiaowutools-v2
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Checkout teamclaw
+        uses: actions/checkout@v4
+        with:
+          repository: weisiwu/teamclaw
+          path: _apps/teamclaw
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Checkout projects-dashboard + openclaw-agents-dashboard
+        uses: actions/checkout@v4
+        with:
+          repository: weisiwu/ZFJdashboard
+          path: _apps/ZFJdashboard
+          token: ${{ secrets.PAT_TOKEN }}
+
+      # 重组 ZFJdashboard 里的两个子项目
+      - name: Reorganize dashboard repos
+        run: |
+          mkdir -p _apps/projects-dashboard _apps/openclaw-agents-dashboard
+          if [ -d "_apps/ZFJdashboard/projects-dashboard" ]; then
+            cp -r _apps/ZFJdashboard/projects-dashboard/* _apps/projects-dashboard/ 2>/dev/null || true
+          fi
+          if [ -d "_apps/ZFJdashboard/openclaw-agents-dashboard" ]; then
+            cp -r _apps/ZFJdashboard/openclaw-agents-dashboard/* _apps/openclaw-agents-dashboard/ 2>/dev/null || true
+          fi
+
+      - name: Run sync script
+        run: |
+          python scripts/sync-docs.py \
+            --project-root "${{ github.workspace }}" \
+            --commit
+
+      - name: Build and verify
+        run: |
+          npm install
+          npx vitepress build

@@ -1,0 +1,21 @@
+name: Notify Docs
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger docs sync
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          repository: weisiwu/zhifujing-docs
+          event-type: sync-docs
+          client-payload: |
+            {"source": "${{ github.repository }}", "ref": "${{ github.ref }}"}
+
+# 使用方法：将此文件复制到各 app 仓库的 .github/workflows/notify-docs.yml
+# 需要在仓库 Settings → Secrets 中配置 PAT_TOKEN（有 repo 权限的 Personal Access Token）

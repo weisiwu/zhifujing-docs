@@ -1,58 +1,116 @@
 # xiaowutools-v2（小工具箱）
 
-> 一个在线工具网站，提供短视频下载、图片格式转换、微信截图生成等实用小工具。面向普通用户和自媒体创作者。
+> 使用 Next.js + React + Tailwind CSS 重构的工具箱网站。
 
 ## 技术栈
 
 | 类别 | 技术 |
 |------|------|
-| 框架 | Next.js 14 (App Router) |
-| 语言 | TypeScript + React 18 |
-| 样式 | Tailwind CSS + shadcn/ui 风格 |
-| 图片处理 | Sharp（图片/ICO 转换） |
-| 视频解析 | Puppeteer（抖音/TikTok） |
-| PDF 工具 | jsPDF / pdf-lib / pdfjs-dist |
-| 码相关 | QRCode / jsQR / JsBarcode |
-| 部署 | Vercel + Analytics + Speed Insights |
+| 框架 | Next.js 14.x |
+| 语言 | React ^18 |
+| 语言 | TypeScript |
+| 样式 | Tailwind CSS |
 
-## 核心功能
+## 关键依赖
 
-### 🎬 抖音/TikTok 下载器
-- 输入视频链接，解析无水印视频
-- 支持 MP3 音频提取
-- 基于 Puppeteer 的服务端解析
-
-### 🖼️ 图片转 ICO
-- 上传图片，选择输出尺寸（16~256px）
-- 基于 Sharp 的高质量转换
-- 支持批量尺寸输出
-
-### 💬 微信聊天截图生成
-- 自定义头像、昵称、对话内容
-- 支持文字/图片/红包/转账消息类型
-- 实时预览，所见即所得
-
-### 🎨 设计特色
-- 渐变紫粉主色调
-- 响应式布局（Mobile / Tablet / Desktop 三断点）
-- 暗色模式支持
+| 包名 | 版本 |
+|------|------|
+| `@types/qrcode` | ^1.5.6 |
+| `@vercel/analytics` | ^1.6.1 |
+| `@vercel/speed-insights` | ^1.3.1 |
+| `class-variance-authority` | ^0.7.0 |
+| `clsx` | ^2.1.0 |
+| `critters` | ^0.0.23 |
+| `jsbarcode` | ^3.12.3 |
+| `jspdf` | ^4.2.0 |
+| `jsqr` | ^1.4.0 |
+| `lucide-react` | ^0.300.0 |
+| `next` | 14.x |
+| `pdf-lib` | ^1.17.1 |
+| `pdfjs-dist` | ^5.4.624 |
+| `puppeteer` | ^24.37.3 |
+| `qrcode` | ^1.5.4 |
+| `react` | ^18 |
+| `react-dom` | ^18 |
+| `react-qr-code` | ^2.0.18 |
+| `sharp` | ^0.33.0 |
+| `tailwind-merge` | ^2.2.0 |
+| `ulid` | ^3.0.2 |
 
 ## 项目结构
 
 ```
 xiaowutools-v2/
-├── app/              # Next.js App Router 页面
-├── components/       # React 组件
-├── public/           # 静态资源
-├── scripts/          # 构建与部署脚本
-├── docs/             # 项目文档
-├── SPEC.md           # 功能规格说明
-├── AGENTS.md         # Agent 协作指南
-└── squirrel.toml     # 配置文件
+├── .github/
+│   ├── workflows/
+│   │   ├── agent-scan.yml
+├── .vercel/
+│   ├── project.json
+├── app/
+│   ├── about/
+│   │   ├── page.tsx
+│   ├── api/
+│   │   ├── ico/
+│   │   ├── tools/
+│   ├── contact/
+│   │   ├── page.tsx
+│   ├── privacy/
+│   │   ├── page.tsx
+│   ├── terms/
+│   │   ├── page.tsx
+│   ├── tools/
+│   │   ├── anagram-checker/
+│   │   ├── ascii-art/
+│   │   ├── barcode-generator/
+│   │   ├── base-converter/
+│   │   ├── base32/
+│   │   ├── base58/
+│   │   ├── base64/
+│   │   ├── base64-image/
+│   │   ├── base64-image-decoder/
+│   │   ├── base64-url/
+│   │   ├── batch-replace/
+│   │   ├── bmi-tracker/
+│   │   ├── caesar-cipher/
+│   │   ├── cantonese-pinyin/
+│   │   ├── case-converter/
+│   │   ├── case-swapper/
+│   │   ├── char-counter/
+│   │   ├── char-frequency/
+│   │   ├── chinese-zodiac/
+│   │   ├── color-blindness-simulator/
+│   │   ├── color-converter/
+│   │   ├── color-format-converter/
+│   │   ├── color-mixer/
+│   │   ├── color-name-finder/
+│   │   ├── color-palette/
+│   │   ├── color-palette-generator/
+│   │   ├── color-picker/
+│   │   ├── contrast-checker/
+│   │   ├── countdown/
+│   │   ├── credit-card-generator/
+│   │   ├── cron-generator/
+│   │   ├── cron-validator/
+│   │   ├── cron-visualizer/
+│   │   ├── css-animation-generator/
+│   │   ├── css-button-generator/
+│   │   ├── css-minifier/
+│   │   ├── csv-json/
+│   │   ├── dictation/
+│   │   ├── diff-checker/
+│   │   ├── duplicate-finder/
+│   │   ├── emoji-picker/
 ```
 
-## 相关链接
+## 最近更新
 
-- 已部署至 Vercel（`.vercel` 目录已存在）
-- 包含自动化版本 bump 脚本
-- 配置了 lint + build 质量门禁
+| Commit | 说明 |
+|--------|------|
+| `c3f9c11` | feat: 添加github |
+| `add622f` | feat: add files |
+| `125a28d` | Auto upgrade: 2026-03-06 08:04 |
+| `4ae8977` | Auto upgrade: 2026-03-06 06:04 |
+| `40659ab` | Auto upgrade: 2026-03-06 04:04 |
+
+---
+*最后同步: 2026-04-16 16:39*

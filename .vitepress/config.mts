@@ -38,6 +38,7 @@ export default defineConfig({
                   items: [
                     { text: '模块1：项目导入', link: '/apps/teamclaw/project/prd-module1-project-import' },
                     { text: '模块2：多Agent编排', link: '/apps/teamclaw/project/prd-module2-agent-orchestration' },
+                    { text: '模块3：任务体系', link: '/apps/teamclaw/project/prd-module3-task-system' },
                   ]
                 },
               ]

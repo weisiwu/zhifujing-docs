@@ -30,9 +30,16 @@ export default defineConfig({
               text: 'TeamClaw 设计文档',
               collapsed: true,
               items: [
-                { text: '项目概览', link: '/apps/teamclaw-project' },
-                { text: '系统架构设计 V1.0', link: '/apps/teamclaw/architecture' },
-                { text: '对话生命周期 V1.0', link: '/apps/teamclaw/conversation-lifecycle' },
+                { text: '项目总览', link: '/apps/teamclaw-project' },
+                { text: '系统架构', link: '/apps/teamclaw/architecture' },
+                { text: '对话生命周期', link: '/apps/teamclaw/conversation-lifecycle' },
+                {
+                  text: 'PRD 文档',
+                  items: [
+                    { text: '模块1：项目导入', link: '/apps/teamclaw/project/prd-module1-project-import' },
+                    { text: '模块2：多Agent编排', link: '/apps/teamclaw/project/prd-module2-agent-orchestration' },
+                  ]
+                },
               ]
             },
             { text: 'projects-dashboard（项目仪表盘）', link: '/apps/projects-dashboard' },

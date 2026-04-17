@@ -1,116 +1,54 @@
 # xiaowutools-v2（小工具箱）
 
-> 使用 Next.js + React + Tailwind CSS 重构的工具箱网站。
+> 基于 Next.js 14 + React + Tailwind CSS 的在线工具箱网站，集成多种实用工具。
 
-## 技术栈
+## 基本信息
 
-| 类别 | 技术 |
+| 项目 | 信息 |
 |------|------|
-| 框架 | Next.js 14.x |
-| 语言 | React ^18 |
-| 语言 | TypeScript |
+| 名称 | xiaowutools-v2 |
+| 框架 | Next.js 14.x (App Router) |
+| 语言 | TypeScript + React 18 |
 | 样式 | Tailwind CSS |
+| UI 组件 | shadcn/ui 风格 |
+| 图片处理 | Sharp |
+| 部署 | Vercel |
+| GitHub | [weisiwu/zhifujing-tools](https://github.com/weisiwu/zhifujing-tools) |
 
-## 关键依赖
+## 功能列表
 
-| 包名 | 版本 |
+| 工具 | 说明 |
 |------|------|
-| `@types/qrcode` | ^1.5.6 |
-| `@vercel/analytics` | ^1.6.1 |
-| `@vercel/speed-insights` | ^1.3.1 |
-| `class-variance-authority` | ^0.7.0 |
-| `clsx` | ^2.1.0 |
-| `critters` | ^0.0.23 |
-| `jsbarcode` | ^3.12.3 |
-| `jspdf` | ^4.2.0 |
-| `jsqr` | ^1.4.0 |
-| `lucide-react` | ^0.300.0 |
-| `next` | 14.x |
-| `pdf-lib` | ^1.17.1 |
-| `pdfjs-dist` | ^5.4.624 |
-| `puppeteer` | ^24.37.3 |
-| `qrcode` | ^1.5.4 |
-| `react` | ^18 |
-| `react-dom` | ^18 |
-| `react-qr-code` | ^2.0.18 |
-| `sharp` | ^0.33.0 |
-| `tailwind-merge` | ^2.2.0 |
-| `ulid` | ^3.0.2 |
+| 抖音/TikTok 下载器 | 一键提取无水印短视频 |
+| 图片转 ICO | 在线转换图片为 ICO 格式 |
+| 微信截图生成器 | 自定义对话内容生成微信截图 |
+| 更多工具 | 持续迭代添加中... |
 
-## 项目结构
+## 目录结构
 
 ```
-xiaowutools-v2/
-├── .github/
-│   ├── workflows/
-│   │   ├── agent-scan.yml
-├── .vercel/
-│   ├── project.json
-├── app/
-│   ├── about/
-│   │   ├── page.tsx
-│   ├── api/
-│   │   ├── ico/
-│   │   ├── tools/
-│   ├── contact/
-│   │   ├── page.tsx
-│   ├── privacy/
-│   │   ├── page.tsx
-│   ├── terms/
-│   │   ├── page.tsx
-│   ├── tools/
-│   │   ├── anagram-checker/
-│   │   ├── ascii-art/
-│   │   ├── barcode-generator/
-│   │   ├── base-converter/
-│   │   ├── base32/
-│   │   ├── base58/
-│   │   ├── base64/
-│   │   ├── base64-image/
-│   │   ├── base64-image-decoder/
-│   │   ├── base64-url/
-│   │   ├── batch-replace/
-│   │   ├── bmi-tracker/
-│   │   ├── caesar-cipher/
-│   │   ├── cantonese-pinyin/
-│   │   ├── case-converter/
-│   │   ├── case-swapper/
-│   │   ├── char-counter/
-│   │   ├── char-frequency/
-│   │   ├── chinese-zodiac/
-│   │   ├── color-blindness-simulator/
-│   │   ├── color-converter/
-│   │   ├── color-format-converter/
-│   │   ├── color-mixer/
-│   │   ├── color-name-finder/
-│   │   ├── color-palette/
-│   │   ├── color-palette-generator/
-│   │   ├── color-picker/
-│   │   ├── contrast-checker/
-│   │   ├── countdown/
-│   │   ├── credit-card-generator/
-│   │   ├── cron-generator/
-│   │   ├── cron-validator/
-│   │   ├── cron-visualizer/
-│   │   ├── css-animation-generator/
-│   │   ├── css-button-generator/
-│   │   ├── css-minifier/
-│   │   ├── csv-json/
-│   │   ├── dictation/
-│   │   ├── diff-checker/
-│   │   ├── duplicate-finder/
-│   │   ├── emoji-picker/
+xiaowutools/
+├── app/                  # Next.js App Router 页面
+│   ├── tools/           # 各工具页面
+│   ├── about/           # 关于页面
+│   ├── contact/         # 联系方式
+│   ├── privacy/         # 隐私政策
+│   └── terms/           # 使用条款
+├── components/          # React 组件
+│   ├── Header.tsx       # 顶部导航
+│   ├── Footer.tsx       # 页脚
+│   ├── ToolsGrid.tsx    # 工具网格
+│   └── LanguageSwitcher.tsx  # 语言切换
+├── scripts/             # 构建与运维脚本
+│   ├── auto-upgrade.sh  # 自动升级脚本
+│   └── batch-translate.js  # 批量翻译
+└── public/              # 静态资源
 ```
 
-## 最近更新
+## 特色
 
-| Commit | 说明 |
-|--------|------|
-| `c3f9c11` | feat: 添加github |
-| `add622f` | feat: add files |
-| `125a28d` | Auto upgrade: 2026-03-06 08:04 |
-| `4ae8977` | Auto upgrade: 2026-03-06 06:04 |
-| `40659ab` | Auto upgrade: 2026-03-06 04:04 |
-
----
-*最后同步: 2026-04-17 00:00*
+- **国际化 (i18n)** — 支持中英文切换
+- **SEO 优化** — sitemap.xml、robots.txt、Open Graph 元数据
+- **AdSense 集成** — 多种广告位组件
+- **自动版本管理** — build-version 自动递增
+- **Vercel Analytics** — 访问数据与性能监控

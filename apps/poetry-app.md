@@ -1,134 +1,66 @@
-# poetry-app（诗词应用）
+# Poetry App（诗词应用）
 
-> This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> 基于 Expo 的跨平台古诗词移动应用，支持 iOS、Android 和 Web。
 
-## 技术栈
+## 基本信息
 
-| 类别 | 技术 |
+| 项目 | 信息 |
 |------|------|
-| 框架 | Expo ~54.0.0 |
-| 语言 | React 19.1.0 |
-| 语言 | TypeScript |
-| UI | react-native-paper |
-| 状态管理 | Zustand |
+| 名称 | poetry-app |
+| 框架 | Expo ~54.0 (Expo Router) |
+| 语言 | TypeScript + React 19.1 |
 | 后端 | Supabase |
-| 本地存储 | better-sqlite3 |
+| 数据库 | SQLite (本地 poetry.db) |
+| 构建 | Expo EAS (Expo Application Services) |
+| 状态 | ✅ 运行中 |
 
-## 关键依赖
+## 功能
 
-| 包名 | 版本 |
-|------|------|
-| `@aws-amplify/ui-react` | ^6.15.1 |
-| `@expo/vector-icons` | ^15.0.3 |
-| `@react-native-async-storage/async-storage` | ^2.2.0 |
-| `@react-navigation/bottom-tabs` | ^7.15.3 |
-| `@react-navigation/elements` | ^2.6.3 |
-| `@react-navigation/native` | ^7.1.31 |
-| `@supabase/supabase-js` | ^2.98.0 |
-| `better-sqlite3` | ^12.8.0 |
-| `expo` | ~54.0.0 |
-| `expo-build-properties` | ~1.0.10 |
-| `expo-constants` | ~18.0.13 |
-| `expo-device` | ^55.0.9 |
-| `expo-font` | ~14.0.11 |
-| `expo-haptics` | ~15.0.8 |
-| `expo-image` | ~3.0.11 |
-| `expo-linking` | ~8.0.11 |
-| `expo-modules-core` | ~3.0.0 |
-| `expo-notifications` | ^55.0.12 |
-| `expo-router` | ~6.0.23 |
-| `expo-splash-screen` | ~31.0.13 |
-| `expo-status-bar` | ~3.0.9 |
-| `expo-symbols` | ~1.0.8 |
-| `expo-system-ui` | ~6.0.9 |
-| `expo-web-browser` | ~15.0.10 |
-| `react` | 19.1.0 |
-| `react-dom` | 19.1.0 |
-| `react-native` | 0.81.5 |
-| `react-native-gesture-handler` | ~2.28.0 |
-| `react-native-paper` | ^5.15.0 |
-| `react-native-reanimated` | ~4.1.1 |
-| `react-native-safe-area-context` | ~5.6.0 |
-| `react-native-screens` | ~4.16.0 |
-| `react-native-web` | ~0.21.0 |
-| `react-native-worklets` | 0.5.1 |
-| `react-navigation` | ^5.0.0 |
-| `zustand` | ^5.0.11 |
+- **古诗词浏览** — 按朝代、诗人、诗词分类浏览
+- **AI 翻译** — 基于 LLM 的古诗词多语言翻译
+- **收藏与学习** — 个人收藏夹、学习进度跟踪
+- **推送通知** — 每日诗词推送
+- **VIP 系统** — 会员订阅功能
 
-## 项目结构
+## 目录结构
 
 ```
 poetry-app/
-├── .vercel/
-│   ├── project.json
-├── .vscode/
-│   ├── extensions.json
-│   ├── settings.json
-├── android/
-│   ├── .gradle/
-│   │   ├── 8.14.3/
-│   │   ├── buildOutputCleanup/
-│   │   ├── noVersion/
-│   │   ├── vcs-1/
-│   ├── .kotlin/
-│   │   ├── sessions/
-│   ├── app/
-│   │   ├── .cxx/
-│   │   ├── build/
-│   │   ├── src/
-│   ├── build/
-│   │   ├── generated/
-│   │   ├── reports/
-│   ├── gradle/
-│   │   ├── wrapper/
-├── app/
-│   ├── (tabs)/
-│   │   ├── _layout.tsx
-│   │   ├── favorites.tsx
-│   │   ├── index.tsx
-│   │   ├── profile.tsx
-│   │   ├── search.tsx
-│   ├── auth/
-│   │   ├── login.tsx
-│   │   ├── register.tsx
-│   ├── poem/
-│   │   ├── [id].tsx
-│   ├── vip/
-│   │   ├── index.tsx
-│   ├── _layout.tsx
-│   ├── modal.tsx
-├── assets/
-│   ├── images/
-├── components/
-│   ├── ui/
-│   │   ├── collapsible.tsx
-│   │   ├── icon-symbol.ios.tsx
-│   │   ├── icon-symbol.tsx
-│   ├── external-link.tsx
-│   ├── haptic-tab.tsx
-│   ├── hello-wave.tsx
-│   ├── parallax-scroll-view.tsx
-│   ├── themed-text.tsx
-│   ├── themed-view.tsx
-├── constants/
-│   ├── theme.ts
-├── data/
-│   ├── processed/
-│   │   ├── dynasties.json
-│   │   ├── poems.json
-│   │   ├── poets.json
-│   ├── raw/
+├── app/                  # Expo Router 页面
+│   ├── (tabs)/          # 底部 Tab 导航
+│   ├── auth/            # 认证相关页面
+│   ├── poem/            # 诗词详情页
+│   ├── vip/             # VIP 会员页
+│   └── _layout.tsx      # 路由布局
+├── components/          # UI 组件
+├── hooks/               # 自定义 Hooks
+│   ├── useAppTheme.ts   # 主题管理
+│   └── usePushNotifications.ts  # 推送通知
+├── data/                # 本地数据
+│   ├── poetry.db        # SQLite 数据库
+│   ├── raw/             # 原始数据
+│   └── processed/       # 处理后数据
+├── lib/                 # Supabase 客户端
+├── constants/           # 主题常量
+├── android/             # Android 原生代码
+└── assets/              # 图片资源
 ```
 
-## 最近更新
+## 数据处理流水线
 
-| Commit | 说明 |
-|--------|------|
-| `4f9cd30` | feat: 保存改动 |
-| `f2796f0` | feat:  保存本地翻译任务 |
-| `a32991f` | feat:添加任务 |
-| `351f20a` | 添加 |
-| `e0c51a7` | iter-1: MVP功能完善 - 登录增强、VIP订阅、推送通知 |
+应用包含丰富的 Python 数据处理脚本：
 
----
-*最后同步: 2026-04-17 12:00*
+| 脚本 | 用途 |
+|------|------|
+| `backfill_v2/v3/v4.py` | 数据回填与补全 |
+| `translate_*.py` | AI 翻译（多批次并行） |
+| `evaluate_poems.py` | 翻译质量评估 |
+| `optimize_*.py` | 翻译优化与重试 |
+| `fast_top1000*.py` | Top 1000 诗词快速处理 |
+
+## 技术亮点
+
+- **本地优先** — SQLite 本地数据库，离线可用
+- **并行处理** — 多 worker 并行翻译，高效处理大规模数据
+- **质量评估** — 翻译结果自动评估与回译验证
+- **跨平台** — Expo 一套代码覆盖 iOS + Android + Web

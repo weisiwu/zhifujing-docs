@@ -39,6 +39,9 @@ export default defineConfig({
                     { text: '模块1：项目导入', link: '/apps/teamclaw/project/prd-module1-project-import' },
                     { text: '模块2：多Agent编排', link: '/apps/teamclaw/project/prd-module2-agent-orchestration' },
                     { text: '模块3：任务体系', link: '/apps/teamclaw/project/prd-module3-task-system' },
+                    { text: '模块4：能力系统', link: '/apps/teamclaw/project/prd-module4-capability-system' },
+                    { text: '模块5：知识库', link: '/apps/teamclaw/project/prd-module5-knowledge-base' },
+                    { text: '模块6：对话生命周期', link: '/apps/teamclaw/project/prd-module6-conversation-lifecycle' },
                   ]
                 },
               ]

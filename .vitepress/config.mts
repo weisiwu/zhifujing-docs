@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: '致富经',
-  description: '个人学习、实践与项目文档中心',
+  description: '个人项目开发与技术文档中心',
   lang: 'zh-CN',
 
   head: [
@@ -14,17 +14,65 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '应用项目', link: '/apps/' },
+      {
+        text: '应用项目',
+        items: [
+          { text: '🛠️ 小伍工具箱 (xiaowutools)', link: '/apps/xiaowutools' },
+          { text: '🤝 TeamClaw 协作平台', link: '/apps/teamclaw' },
+          { text: '📊 项目仪表盘 (Dashboard)', link: '/apps/projects-dashboard' },
+          { text: '📜 诗词应用 (Poetry App)', link: '/apps/poetry-app' },
+        ]
+      },
       { text: '学习笔记', link: '/notes/' },
     ],
 
     sidebar: {
+      '/apps/teamclaw': [
+        {
+          text: 'TeamClaw 协作平台',
+          items: [
+            { text: '📋 项目总览', link: '/apps/teamclaw' },
+          ]
+        },
+        {
+          text: '🏗️ 设计文档',
+          items: [
+            { text: '系统架构设计', link: '/apps/teamclaw/architecture' },
+            { text: '对话生命周期', link: '/apps/teamclaw/conversation-lifecycle' },
+          ]
+        },
+        {
+          text: '📝 PRD 文档',
+          collapsible: true,
+          items: [
+            { text: '模块1：项目导入', link: '/apps/teamclaw/prd-module1-project-import' },
+            { text: '模块2：Agent 编排', link: '/apps/teamclaw/prd-module2-agent-orchestration' },
+            { text: '模块3：任务体系', link: '/apps/teamclaw/prd-module3-task-system' },
+            { text: '模块4：能力系统', link: '/apps/teamclaw/prd-module4-capability-system' },
+            { text: '模块5：知识库', link: '/apps/teamclaw/prd-module5-knowledge-base' },
+            { text: '模块6：对话生命周期', link: '/apps/teamclaw/prd-module6-conversation-lifecycle' },
+          ]
+        },
+        {
+          text: '🔧 技术分析',
+          items: [
+            { text: '技术栈深度分析', link: '/apps/teamclaw/tech-stack' },
+            { text: '技术方案设计合集', link: '/apps/teamclaw/tech-plans' },
+          ]
+        },
+        {
+          text: '🔙 返回',
+          items: [
+            { text: '← 项目一览', link: '/apps/' },
+          ]
+        }
+      ],
       '/apps/': [
         {
           text: '应用项目',
           items: [
             { text: '项目一览', link: '/apps/' },
-            { text: '小工具箱 (xiaowutools)', link: '/apps/xiaowutools-v2' },
+            { text: '小伍工具箱 (xiaowutools)', link: '/apps/xiaowutools' },
             { text: 'TeamClaw 协作平台', link: '/apps/teamclaw' },
             { text: '项目仪表盘 (Dashboard)', link: '/apps/projects-dashboard' },
             { text: '诗词应用 (Poetry App)', link: '/apps/poetry-app' },
@@ -75,7 +123,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '致富经 — 学习、实践与项目沉淀',
+      message: '致富经 — 项目开发 & 技术沉淀',
       copyright: '© 2025-2026 致富经项目'
     },
 

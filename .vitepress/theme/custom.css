@@ -15,3 +15,48 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ===== 项目卡片网格 ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.project-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.1);
+}
+
+.project-card h3 {
+  margin-top: 0 !important;
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
+/* 上线项目 — 绿色左边框 */
+.project-card.online {
+  border-left: 4px solid #10b981;
+}
+
+/* 开发中项目 — 橙色左边框 */
+.project-card.dev {
+  border-left: 4px solid #f59e0b;
+}
+
+/* ===== 首页 Feature 区域分隔 ===== */
+.VPFeature {
+  transition: transform 0.2s;
+}
+
+.VPFeature:hover {
+  transform: translateY(-2px);
+}

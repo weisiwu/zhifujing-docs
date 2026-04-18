@@ -89,6 +89,12 @@ export default defineConfig({
       ],
       '/notes/': [
         {
+          text: '🔬 医学影像',
+          items: [
+            { text: '心脏造影双 marker 跟踪方案', link: '/notes/marker-tracking' },
+          ]
+        },
+        {
           text: '技术学习',
           items: [
             { text: '学习笔记索引', link: '/notes/' },

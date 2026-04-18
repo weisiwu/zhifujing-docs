@@ -45,6 +45,27 @@ projects-dashboard/
 ├── .vercel/
 │   ├── project.json
 ├── docs/
+│   ├── PROMPT_SUPABASE_MIGRATION.md
+├── overview-docs/
+│   ├── .vitepress/
+│   │   ├── cache/
+│   │   ├── theme/
+│   │   ├── config.mts
+│   ├── apps/
+│   │   ├── index.md
+│   │   ├── marker-tracker.md
+│   │   ├── poetry-app.md
+│   │   ├── projects-dashboard.md
+│   │   ├── teamclaw.md
+│   │   ├── xiaowutools.md
+│   ├── notes/
+│   │   ├── index.md
+│   │   ├── learning.md
+│   │   ├── practice.md
+│   ├── index.md
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── vercel.json
 ├── public/
 │   ├── manifest.json
 ├── scripts/
@@ -80,38 +101,17 @@ projects-dashboard/
 │   ├── components/
 │   │   ├── animation/
 │   │   ├── animations/
-│   │   ├── auth/
-│   │   ├── batch-operations/
-│   │   ├── charts/
-│   │   ├── command-palette/
-│   │   ├── compare/
-│   │   ├── dashboard/
-│   │   ├── data/
-│   │   ├── empty-states/
-│   │   ├── features/
-│   │   ├── feedback/
-│   │   ├── health/
-│   │   ├── kanban/
-│   │   ├── layout/
-│   │   ├── markdown/
-│   │   ├── project/
-│   │   ├── skeletons/
-│   │   ├── ui/
-│   │   ├── usage/
-│   │   ├── Breadcrumb.tsx
-│   │   ├── ErrorBoundary.tsx
-│   │   ├── FavoritesSection.tsx
 ```
 
 ## 最近更新
 
 | Commit | 说明 |
 |--------|------|
+| `e42a3c0` | fix: 首页移除学习笔记卡片，只保留5个项目 |
+| `d20a6a8` | feat: 添加致富经大盘总览文档站 (overview-docs) |
 | `ffc7ff8` | fix: 修复307重定向+更新4项目数据+详情页增加GitHub/Docs链接+删除根目录重复大盘 |
 | `20bcfd7` | iter-3: Supabase客户端配置和API改造 - 完成supabase客户端集成 |
 | `2d5f05b` | iter-1: Supabase数据库表设计和种子数据 - 添加Supabase客户端和类型定义 |
-| `5f7bc60` | iter-10: 功能增加 - 项目健康状态指示、右键上下文菜单、项目对比功能 |
-| `0aa578c` | iter-9: 样式改版 - 表单组件/模态框抽屉/表格样式 |
 
 ---
-*最后同步: 2026-04-19 00:00*
+*最后同步: 2026-04-19 06:00*

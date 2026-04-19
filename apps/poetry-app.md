@@ -7,6 +7,14 @@
 ```
 poetry-app/
 ├── .dart_tool/
+│   ├── flutter_build/
+│   │   ├── 83a6ea3dd21e3a8822cbe82644bc0268/
+│   │   ├── 8d5ca932286ab10e04b6a1a453dd878f/
+│   │   ├── 9335e29567230a6fbcbef2bc670d1c6e/
+│   │   ├── a4e8572752b34b9ed2243411aba943ac/
+│   ├── hooks_runner/
+│   │   ├── objective_c/
+│   │   ├── shared/
 │   ├── package_config.json
 │   ├── package_graph.json
 ├── .idea/
@@ -22,6 +30,20 @@ poetry-app/
 │   │   ├── dynasties.json
 │   │   ├── poems.json
 │   │   ├── poets.json
+├── build/
+│   ├── 06b79645c2df169033de9aba36e8eafd/
+│   │   ├── dart_build_result.json
+│   │   ├── gen_l10n_inputs_and_outputs.json
+│   │   ├── outputs.json
+│   ├── macos/
+│   │   ├── Build/
+│   │   ├── CompilationCache.noindex/
+│   │   ├── Logs/
+│   │   ├── ModuleCache.noindex/
+│   │   ├── SDKStatCaches.noindex/
+│   ├── native_assets/
+│   │   ├── macos/
+│   ├── native_hooks/
 ├── ios/
 │   ├── Flutter/
 │   │   ├── ephemeral/
@@ -36,36 +58,14 @@ poetry-app/
 │   ├── RunnerTests/
 ├── lib/
 │   ├── config/
+│   ├── l10n/
 │   ├── models/
 │   ├── providers/
 │   ├── repositories/
 │   ├── screens/
 │   │   ├── browse/
 │   │   ├── favorites/
-│   │   ├── history/
-│   │   ├── home/
-│   │   ├── poem_detail/
-│   │   ├── poet_detail/
-│   │   ├── profile/
-│   │   ├── search/
-│   ├── services/
-│   ├── widgets/
-├── macos/
-│   ├── Flutter/
-│   │   ├── ephemeral/
-│   ├── Pods/
-│   │   ├── Headers/
-│   │   ├── Local Podspecs/
-│   │   ├── Pods.xcodeproj/
-│   │   ├── Target Support Files/
-│   ├── Runner/
-│   │   ├── Assets.xcassets/
-│   │   ├── Base.lproj/
-│   │   ├── Configs/
-│   ├── Runner.xcodeproj/
-│   │   ├── project.xcworkspace/
-│   │   ├── xcshareddata/
 ```
 
 ---
-*最后同步: 2026-04-19 18:00*
+*最后同步: 2026-04-20 00:00*

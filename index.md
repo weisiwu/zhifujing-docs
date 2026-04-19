@@ -28,6 +28,10 @@ features:
     link: /apps/projects-dashboard
   - icon: 📜
     title: Poetry App 诗词应用
-    details: Expo 跨平台移动应用，含古诗词数据库、AI 翻译、Supabase 后端
+    details: Tauri 2.x 桌面应用，内置古诗词数据库，支持搜索、收藏、每日推荐
     link: /apps/poetry-app
+  - icon: 🔬
+    title: Marker Tracker 标记物追踪
+    details: Python 医学影像工具 — DICOM/视频序列中 Marker 自动检测、逐帧跟踪与距离测量
+    link: /apps/marker-tracker
 ---

@@ -21,6 +21,7 @@ export default defineConfig({
           { text: '🤝 TeamClaw 协作平台', link: '/apps/teamclaw' },
           { text: '📊 项目仪表盘 (Dashboard)', link: '/apps/projects-dashboard' },
           { text: '📜 诗词应用 (Poetry App)', link: '/apps/poetry-app' },
+          { text: '🔬 标记物追踪 (Marker Tracker)', link: '/apps/marker-tracker' },
         ]
       },
       { text: '学习笔记', link: '/notes/' },
@@ -76,6 +77,7 @@ export default defineConfig({
             { text: 'TeamClaw 协作平台', link: '/apps/teamclaw' },
             { text: '项目仪表盘 (Dashboard)', link: '/apps/projects-dashboard' },
             { text: '诗词应用 (Poetry App)', link: '/apps/poetry-app' },
+            { text: '标记物追踪 (Marker Tracker)', link: '/apps/marker-tracker' },
           ]
         },
         {

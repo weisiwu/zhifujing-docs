@@ -47,6 +47,8 @@ poetry-app/
 │   ├── native_assets/
 │   │   ├── macos/
 │   ├── native_hooks/
+├── context/
+│   ├── project-context.md
 ├── ios/
 │   ├── Flutter/
 │   │   ├── ephemeral/
@@ -63,9 +65,7 @@ poetry-app/
 │   ├── config/
 │   ├── l10n/
 │   ├── models/
-│   ├── providers/
-│   ├── repositories/
 ```
 
 ---
-*最后同步: 2026-05-02 12:00*
+*最后同步: 2026-05-02 18:00*

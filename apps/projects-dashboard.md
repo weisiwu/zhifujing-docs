@@ -44,6 +44,8 @@
 projects-dashboard/
 ├── .vercel/
 │   ├── project.json
+├── context/
+│   ├── project-context.md
 ├── docs/
 │   ├── PROMPT_SUPABASE_MIGRATION.md
 ├── overview-docs/
@@ -99,8 +101,6 @@ projects-dashboard/
 │   │   ├── robots.ts
 │   │   ├── sitemap.ts
 │   ├── components/
-│   │   ├── animation/
-│   │   ├── animations/
 ```
 
 ## 最近更新
@@ -114,4 +114,4 @@ projects-dashboard/
 | `2d5f05b` | iter-1: Supabase数据库表设计和种子数据 - 添加Supabase客户端和类型定义 |
 
 ---
-*最后同步: 2026-05-02 12:00*
+*最后同步: 2026-05-02 18:00*

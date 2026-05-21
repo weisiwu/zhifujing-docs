@@ -28,6 +28,43 @@
 
 ```
 teamclaw/
+├── .hermes/
+│   ├── plans/
+│   │   ├── 2026-05-21_154234-v3-architecture-robust-implementation.md
+│   │   ├── 2026-05-21_164911-yuque-knowledge-base-taxonomy-optimization.md
+│   ├── scripts/
+│   │   ├── yuque_adjust_teamclaw_toc_v2.py
+│   │   ├── yuque_audit_current.py
+│   │   ├── yuque_cleanup_enrich_20260521.py
+│   │   ├── yuque_prune_enrich_teamclaw.py
+│   │   ├── yuque_remove_toc_numeric_prefixes.py
+│   │   ├── yuque_reorder_teamclaw_toc.py
+│   │   ├── yuque_restore_grouped_toc_20260521.py
+│   ├── yuque-backups/
+│   │   ├── cleanup-enrich-2026-05-21_172832/
+│   │   ├── cleanup-enrich-2026-05-21_172852/
+│   │   ├── cleanup-enrich-2026-05-21_173028/
+│   │   ├── prune-enrich-2026-05-21_171633/
+│   │   ├── prune-enrich-2026-05-21_171655/
+│   │   ├── restore-grouped-toc-2026-05-21_173645/
+│   │   ├── restore-grouped-toc-2026-05-21_173657/
+│   │   ├── teamclaw-bg35b1-before-remove-numbers-2026-05-21_171020.json
+│   │   ├── teamclaw-bg35b1-target-remove-numbers-2026-05-21_171020.yml
+│   │   ├── teamclaw-bg35b1-target-toc-2026-05-21_165335.yml
+│   │   ├── teamclaw-bg35b1-target-v2-2026-05-21_170340.yml
+│   │   ├── teamclaw-bg35b1-target-v2-2026-05-21_170352.yml
+│   │   ├── teamclaw-bg35b1-toc-2026-05-21_165335.json
+│   │   ├── teamclaw-bg35b1-toc-2026-05-21_165335.md
+│   │   ├── teamclaw-bg35b1-toc-2026-05-21_165347.json
+│   │   ├── teamclaw-bg35b1-toc-2026-05-21_165347.md
+│   │   ├── teamclaw-bg35b1-toc-before-v2-2026-05-21_170340.json
+│   │   ├── teamclaw-bg35b1-toc-before-v2-2026-05-21_170352.json
+├── .understand-anything/
+│   ├── config.json
+│   ├── fingerprints.json
+│   ├── knowledge-graph.json
+│   ├── meta.json
+│   ├── summary.json
 ├── .vscode/
 │   ├── extensions.json
 ├── _legacy-nextjs/
@@ -50,44 +87,7 @@ teamclaw/
 │   │   ├── docs/
 │   │   ├── import/
 │   │   ├── lib/
-│   │   ├── login/
-│   │   ├── members/
-│   │   ├── messages/
-│   │   ├── monitor/
-│   │   ├── projects/
-│   │   ├── settings/
-│   │   ├── tags/
-│   │   ├── tasks/
-│   │   ├── tokens/
-│   │   ├── versions/
-│   │   ├── error.tsx
-│   │   ├── layout.tsx
-│   │   ├── not-found.tsx
-│   │   ├── page.tsx
-│   ├── components/
-│   │   ├── agent-team/
-│   │   ├── auth/
-│   │   ├── branch/
-│   │   ├── capabilities/
-│   │   ├── layout/
-│   │   ├── members/
-│   │   ├── messages/
-│   │   ├── providers/
-│   │   ├── team/
-│   │   ├── theme/
-│   │   ├── tokens/
-│   │   ├── ui/
-│   │   ├── versions/
-│   │   ├── DocSearchBox.tsx
-│   │   ├── DocViewer.tsx
-│   │   ├── FileTree.tsx
-│   ├── config/
-│   │   ├── models.ts
-│   ├── data/
-│   │   ├── tasks/
-│   ├── deploy/
-│   ├── docs/
 ```
 
 ---
-*最后同步: 2026-05-21 12:01*
+*最后同步: 2026-05-21 18:00*

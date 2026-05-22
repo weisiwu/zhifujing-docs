@@ -39,6 +39,7 @@ teamclaw/
 │   │   ├── yuque_prune_enrich_teamclaw.py
 │   │   ├── yuque_remove_toc_numeric_prefixes.py
 │   │   ├── yuque_reorder_teamclaw_toc.py
+│   │   ├── yuque_repair_teamclaw_toc_runtime_docs_20260522.py
 │   │   ├── yuque_restore_grouped_toc_20260521.py
 │   ├── yuque-backups/
 │   │   ├── cleanup-enrich-2026-05-21_172832/
@@ -46,6 +47,36 @@ teamclaw/
 │   │   ├── cleanup-enrich-2026-05-21_173028/
 │   │   ├── prune-enrich-2026-05-21_171633/
 │   │   ├── prune-enrich-2026-05-21_171655/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_151249/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_151448/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_152018/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_152034/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_152311/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_162750/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_162917/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_163152/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_163623/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_165458/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_170130/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_170142/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_170857/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_170903/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_171508/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_171516/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_172111/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_172118/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_172802/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_172956/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_173611/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_173616/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_174135/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_174136/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_174714/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_174720/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_175344/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_175345/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_175921/
+│   │   ├── repair-runtime-docs-toc-2026-05-22_175931/
 │   │   ├── restore-grouped-toc-2026-05-21_173645/
 │   │   ├── restore-grouped-toc-2026-05-21_173657/
 │   │   ├── teamclaw-bg35b1-before-remove-numbers-2026-05-21_171020.json
@@ -56,38 +87,7 @@ teamclaw/
 │   │   ├── teamclaw-bg35b1-toc-2026-05-21_165335.json
 │   │   ├── teamclaw-bg35b1-toc-2026-05-21_165335.md
 │   │   ├── teamclaw-bg35b1-toc-2026-05-21_165347.json
-│   │   ├── teamclaw-bg35b1-toc-2026-05-21_165347.md
-│   │   ├── teamclaw-bg35b1-toc-before-v2-2026-05-21_170340.json
-│   │   ├── teamclaw-bg35b1-toc-before-v2-2026-05-21_170352.json
-├── .understand-anything/
-│   ├── config.json
-│   ├── fingerprints.json
-│   ├── knowledge-graph.json
-│   ├── meta.json
-│   ├── summary.json
-├── .vscode/
-│   ├── extensions.json
-├── _legacy-nextjs/
-│   ├── .github/
-│   │   ├── workflows/
-│   ├── .husky/
-│   │   ├── _/
-│   ├── .pids/
-│   ├── .vercel/
-│   │   ├── project.json
-│   ├── app/
-│   │   ├── admin/
-│   │   ├── agent-team/
-│   │   ├── agent-tokens/
-│   │   ├── api/
-│   │   ├── api-tokens/
-│   │   ├── branches/
-│   │   ├── capabilities/
-│   │   ├── cron/
-│   │   ├── docs/
-│   │   ├── import/
-│   │   ├── lib/
 ```
 
 ---
-*最后同步: 2026-05-22 12:00*
+*最后同步: 2026-05-22 18:00*

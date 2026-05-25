@@ -28,19 +28,29 @@
 
 ```
 teamclaw/
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml
+│   │   ├── release.yml
 ├── .hermes/
 │   ├── plans/
 │   │   ├── 2026-05-21_154234-v3-architecture-robust-implementation.md
 │   │   ├── 2026-05-21_164911-yuque-knowledge-base-taxonomy-optimization.md
 │   ├── scripts/
+│   │   ├── batch_screenshots.py
+│   │   ├── imgur_upload_screenshots.py
 │   │   ├── yuque_adjust_teamclaw_toc_v2.py
 │   │   ├── yuque_audit_current.py
 │   │   ├── yuque_cleanup_enrich_20260521.py
+│   │   ├── yuque_embed_images.py
 │   │   ├── yuque_prune_enrich_teamclaw.py
 │   │   ├── yuque_remove_toc_numeric_prefixes.py
 │   │   ├── yuque_reorder_teamclaw_toc.py
 │   │   ├── yuque_repair_teamclaw_toc_runtime_docs_20260522.py
 │   │   ├── yuque_restore_grouped_toc_20260521.py
+│   │   ├── yuque_reupload_with_images.py
+│   │   ├── yuque_test_base64.py
+│   │   ├── yuque_upload_images.py
 │   ├── yuque-backups/
 │   │   ├── cleanup-enrich-2026-05-21_172832/
 │   │   ├── cleanup-enrich-2026-05-21_172852/
@@ -77,17 +87,7 @@ teamclaw/
 │   │   ├── repair-runtime-docs-toc-2026-05-22_175345/
 │   │   ├── repair-runtime-docs-toc-2026-05-22_175921/
 │   │   ├── repair-runtime-docs-toc-2026-05-22_175931/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_180518/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_180519/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_181157/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_181205/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_181857/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_181902/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_182410/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_182415/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_183011/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_183016/
 ```
 
 ---
-*最后同步: 2026-05-25 06:00*
+*最后同步: 2026-05-25 12:00*

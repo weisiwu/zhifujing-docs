@@ -37,8 +37,16 @@ teamclaw/
 │   │   ├── 2026-05-21_154234-v3-architecture-robust-implementation.md
 │   │   ├── 2026-05-21_164911-yuque-knowledge-base-taxonomy-optimization.md
 │   ├── scripts/
+│   │   ├── annotate_local.py
+│   │   ├── annotate_precise.py
+│   │   ├── annotate_screenshots.py
+│   │   ├── annotate_screenshots_v2.py
 │   │   ├── batch_screenshots.py
+│   │   ├── check_screenshots.py
 │   │   ├── imgur_upload_screenshots.py
+│   │   ├── organize_screenshots.py
+│   │   ├── upload_remaining.py
+│   │   ├── upload_v3_screenshots.py
 │   │   ├── yuque_adjust_teamclaw_toc_v2.py
 │   │   ├── yuque_audit_current.py
 │   │   ├── yuque_cleanup_enrich_20260521.py
@@ -49,8 +57,6 @@ teamclaw/
 │   │   ├── yuque_repair_teamclaw_toc_runtime_docs_20260522.py
 │   │   ├── yuque_restore_grouped_toc_20260521.py
 │   │   ├── yuque_reupload_with_images.py
-│   │   ├── yuque_test_base64.py
-│   │   ├── yuque_upload_images.py
 │   ├── yuque-backups/
 │   │   ├── cleanup-enrich-2026-05-21_172832/
 │   │   ├── cleanup-enrich-2026-05-21_172852/
@@ -81,13 +87,7 @@ teamclaw/
 │   │   ├── repair-runtime-docs-toc-2026-05-22_173616/
 │   │   ├── repair-runtime-docs-toc-2026-05-22_174135/
 │   │   ├── repair-runtime-docs-toc-2026-05-22_174136/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_174714/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_174720/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_175344/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_175345/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_175921/
-│   │   ├── repair-runtime-docs-toc-2026-05-22_175931/
 ```
 
 ---
-*最后同步: 2026-05-26 06:00*
+*最后同步: 2026-05-26 12:01*

@@ -118,6 +118,7 @@ export default defineConfig({
         {
           text: '实战笔记',
           items: [
+            { text: '本机 Docker 服务运行手册', link: '/notes/practice/local-docker-services' },
             { text: 'GitHub Actions 迭代调度', link: '/notes/practice/actions-loop' },
             { text: 'Agent 超时无响应排查', link: '/notes/practice/agent-timeout' },
             { text: 'Issue 残留与幂等性设计', link: '/notes/practice/issue-idempotent' },

@@ -34,12 +34,13 @@
 |------|--------|------|
 | [AI 生成 APP 设计稿](./learning/ai-app-design) | AI UI, 设计稿, 最佳实践 | 使用 AI 生成 APP 设计稿的最佳实践和经验总结 |
 
-## 实战笔记（3 篇）
+## 实战笔记（4 篇）
 
 > 来自 OpenClaw 实战开发的踩坑记录和经验总结。
 
 | 文章 | 关键词 | 摘要 |
 |------|--------|------|
+| [本机 Docker 服务与镜像运行手册](./practice/local-docker-services) | Docker, 按需启动, 镜像, 数据卷 | 本机 Docker 服务拓扑、统一启停、消息主线、镜像清理与数据安全边界 |
 | [GitHub Actions 迭代调度](./practice/actions-loop) | GitHub Actions, 轮询, 循环 | 从轮询到循环的 GitHub Actions 自动迭代调度架构改造 |
 | [Agent 超时无响应排查](./practice/agent-timeout) | Agent, 超时, Cron 调度 | OpenClaw Agent 超时无响应的排查实录与 Cron 调度机制解析 |
 | [Issue 残留与幂等性设计](./practice/issue-idempotent) | Issue, 幂等性, 自动迭代 | 自动迭代 Issue 残留问题分析与幂等性设计方案 |

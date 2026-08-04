@@ -89,5 +89,14 @@ teamclaw/
 │   │   ├── ui/
 ```
 
+## 最近更新
+
+| Commit | 说明 |
+|--------|------|
+| `e011dc4` | chore: 更新 _legacy-nextjs gitlink（大小写对齐） |
+| `46fb7d2` | chore: 更新 _legacy-nextjs gitlink（大小写对齐） |
+| `a0f10b2` | chore: 更新 _legacy-nextjs gitlink 指针 |
+| `7d5255e` | chore: 初始化仓库 |
+
 ---
-*最后同步: 2026-08-04 06:02*
+*最后同步: 2026-08-05 00:06*
